@@ -4,7 +4,7 @@
 }
 
 .cabecalho{
-  background: #3b89da;
+  background: rgb(255, 187, 0);
 }
 
 .cartao{
@@ -25,6 +25,8 @@
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  background: #e8e8e8;
 }
 
 @media (min-width:560px) {

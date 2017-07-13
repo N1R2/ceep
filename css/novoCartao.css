@@ -1,7 +1,7 @@
 .novoCartao {
 	font-size: 1rem;
-	margin: 0 auto 2em;
-	background: rgba(0,0,0,.15);
+ /* margin: 0 auto 2em; */
+	background: #e8e8e8;
 	padding-top: 1.5em;
 	padding-bottom: 1em;
 }

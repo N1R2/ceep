@@ -17,20 +17,26 @@ document.querySelector("#mudaLayout").addEventListener("click", function(){
  }
  });
 
+function decideTipoCartao(conteudo){
+    var quebras = conteudo.split("<br>").length;
 
-var botoes = document.querySelectorAll(".opcoesDoCartao-remove");
+    var totalDeLetras = conteudo.replace(/<br>/g," ").length;
 
-for(var i = 0; i < botoes.length; i++){
-    botoes[i].addEventListener("click", removeCartao);
+    var ultimoMaior = " ";
+    conteudo.replace(/<br>/g, " ")
+            .split(" ")
+            .forEach(function([palavra]){
+                if (palavra.length > ultimoMaior.length){
+                    ultimoMaior = palavra;
+                }
+            });
+            var tamMaior = ultimoMaior.length;
+
+            // no ultimo, todo cartao tem o testo pequeno
+            var tipoCartao = "cartao--textoPequeno";
+            if (tamMaior < 9 && quebras < 5 && totalDeLetras < 55){
+                tipoCartao = "cartao--textoMedio";
+            }
+            return tipoCartao;
 }
 
-
-function removeCartao(){
-        var cartao = document.querySelector("#cartao_" + this.dataset.ref);
-        //dá uma classe que faz ele sumir devagar
-        cartao.classList.add("cartao--some");
-        //tira da página depois da animação
-        setTimeout(function(){
-        },400);
-        cartao.remove();
-}

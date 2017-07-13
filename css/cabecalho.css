@@ -11,12 +11,13 @@
 }
 
 .cabecalho-logo {
+	font-family: 'Product Sans',Arial,sans-serif;
 	font-size: 2em;
-	margin-bottom: .3em;
-	font-family: "Verdana", "Helvetica", sans-serif;
-	color: rgba(255,255,255,.7);
+	margin-bottom: .3em
+	color: rgba(52, 49, 49, 1);
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 1em;
 	margin-bottom: 0;
+	
 }
